@@ -95,7 +95,7 @@
                     currSum = 0;
                     for (let l = 0, r = 0; r &lt; nums.length; r++) {
                         currSum += nums[r];
-                        while (l &le; r && currSum &gt; sumRest) {
+                        while (l &le; r &amp;&amp; currSum &gt; sumRest) {
                             currSum -= nums[l++];
                         }
                         if (currSum === sumRest) {
