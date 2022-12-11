@@ -7,7 +7,7 @@
 </head>
 <body>
 <header class="header">
-    <H1 class="header__title">Olga Myazina</H1>
+    <h1 class="header__title">Olga Myazina</h1>
     <div class="header__description">Frontend developer</div>
     <img src="https://avatars.githubusercontent.com/u/15001413?v=4" alt="photo by Olga Myazina" class="avatar">
     <nav>
@@ -82,7 +82,7 @@
                 * @param {number} x
                 * @return {number}
                 */
-                const minOperations = (nums, x) => {
+                const minOperations = (nums, x) &ge; {
                     let sum = 0;
                     for (let num of nums) {
                         sum += num;
@@ -95,7 +95,7 @@
                     currSum = 0;
                     for (let l = 0, r = 0; r &lt; nums.length; r++) {
                         currSum += nums[r];
-                        while (l &le; r && currSum &gt; sumRest) {
+                        while (l &le; r &amp;&amp; currSum &gt; sumRest) {
                             currSum -= nums[l++];
                         }
                         if (currSum === sumRest) {
