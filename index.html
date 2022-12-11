@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+    <H1 class="header__title">Olga Myazina</H1>
+    <div class="header__description">Frontend developer</div>
+    <img src="https://avatars.githubusercontent.com/u/15001413?v=4" alt="photo by Olga Myazina" class="avatar"/>
+    <nav>
+        <ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#stack">Stack</a></li>
+            <li><a href="#work-experience">Work experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#languages">Languages</a></li>
+            <li><a href="#code-example">Code example</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="section" id="contact">
+        <h2 class="section__title">Contact</h2>
+        <ul>
+            <li>Telegram: @olga_myazina</li>
+            <li>Github: olgamyazina</li>
+            <li>Discord: olga.myazina</li>
+        </ul>
+    </section>
+    <section class="section" id="about">
+        <h2 class="section__title">About</h2>
+        <ul>
+            <li>Passionate about frontend for 4 years</li>
+            <li>Enjoys helping others</li>
+            <li>Learning English (endless process)</li>
+            <li>tried to [channel](https://dzen.ru/a/YqY1d1shgxK2Q2Ug)</li>
+        </ul>
+    </section>
+    <section class="section" id="stack">
+        <h2 class="section__title">Stack</h2>
+        <ul>
+            <li>React</li>
+            <li>Redux + Redux-toolkit</li>
+            <li>Lerna</li>
+            <li>Microfrontend (Webpack module federation)</li>
+            <li>SASS (SCSS)</li>
+        </ul>
+    </section>
+    <section class="section" id="work-experience">
+        <h2 class="section__title">Work experience</h2>
+        <ul>
+            <li>2020-2022 Javascript developer in <code>Company name</code></li>
+            <li>2019-2020 Javascript developer freelance</li>
+        </ul>
+    </section>
+    <section class="section" id="education">
+        <h2 class="section__title">Education</h2>
+        <ul>
+            <li>2019-2020 SHRI (interface development school)</li>
+            <li>2019 Geekbrains</li>
+            <li>2019 Netology</li>
+            <li>2006-2011 MIREA — RUSSIAN TECHNOLOGICAL UNIVERSITY</li>
+        </ul>
+    </section>
+    <section class="section" id="languages">
+        <h2 class="section__title">Languages</h2>
+        <ul>
+            <li>Russian C1</li>
+            <li>English A2-B1</li>
+        </ul>
+    </section>
+    <section class="section" id="code-example">
+        <h2 class="section__title">Code example</h2>
+        <pre>
+            <code>
+                /**
+                * @param {number[]} nums
+                * @param {number} x
+                * @return {number}
+                */
+                const minOperations = (nums, x) => {
+                    let sum = 0;
+                    for (let num of nums) {
+                        sum += num;
+                    }
+                    if (sum === x) {
+                        return nums.length;
+                    }
+                    const sumRest = sum - x;
+                    let maxLength = -1,
+                    currSum = 0;
+                    for (let l = 0, r = 0; r &lt; nums.length; r++) {
+                        currSum += nums[r];
+                        while (l &le; r && currSum &gt; sumRest) {
+                            currSum -= nums[l++];
+                        }
+                        if (currSum === sumRest) {
+                            maxLength = Math.max(maxLength, r - l + 1);
+                        }
+                    }
+                    return maxLength === -1 ? maxLength : nums.length - maxLength;
+                };
+            </code>
+        </pre>
+    </section>
+
+</main>
+<footer>
+    <a href="https://github.com/OlgaMyazina">Github</a>
+    <a href="https://rs.school/">rs-school</a>
+    2022
+</footer>
+</body>
+</html>
